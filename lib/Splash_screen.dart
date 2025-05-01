@@ -1,8 +1,8 @@
 import 'dart:async';
+import 'package:accounting/Login_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'DeopboxViwerpage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      Get.off(() => const DropboxViewerPage()); // Navigate and remove SplashScreen
+      Get.off(() => const LoginPage()); // Navigate and remove SplashScreen
     });
   }
 
