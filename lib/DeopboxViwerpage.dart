@@ -55,14 +55,16 @@ class _DropboxViewerPageState extends State<DropboxViewerPage> {
           backgroundColor: const Color(0xff9d2a8a),
           iconTheme: const IconThemeData(color: Colors.white),
         ),
-        body: Stack(
-          children: [
-            WebViewWidget(controller: _controller),
-            if (isLoading)
-              const Center(
-                child: CircularProgressIndicator(),
-              ),
-          ],
+        body: SafeArea(
+          child: Stack(
+            children: [
+              WebViewWidget(controller: _controller),
+              if (isLoading)
+                const Center(
+                  child: CircularProgressIndicator(),
+                ),
+            ],
+          ),
         ),
       ),
     );
